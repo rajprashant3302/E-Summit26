@@ -51,6 +51,7 @@ const Page = () => {
         </section>
         <ArrowDown className="text-white animate-bounce" />
       </div>
+      <div id="nav-trigger" className="h-px" />
 
       <div className={`w-full ${styles.background2}`}>
 
