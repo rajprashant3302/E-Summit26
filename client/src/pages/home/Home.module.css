@@ -1,4 +1,13 @@
 
+.chopsicText {
+  font-family: "Chopsic", sans-serif;
+  font-weight: 700;
+}
+.stepsText {
+  font-family: "Steps", sans-serif;
+  font-weight: 700;
+}
+
 .background{
   min-height: 100vh;
   background-image: url('/home/backdrop.png');

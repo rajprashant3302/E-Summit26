@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import styles from "./Home.module.css";
 
 const StatsSection = () => {
   return (
@@ -49,9 +50,9 @@ const StatsSection = () => {
       whileHover={{ rotate: 90 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
     />
-    <div className="relative w-[200px] h-[200px] bg-[#d4af37] rounded-full flex flex-col items-center justify-center text-black text-center z-10 pointer-events-none">
-      <h3 className="text-2xl font-bold">{item.value}</h3>
-      <p className="text-xs tracking-wide">{item.label}</p>
+    <div className={`relative w-[200px] h-[200px] bg-[#d4af37] rounded-full flex flex-col items-center justify-center text-white text-center z-10 pointer-events-none  `}>
+      <h3 className={`text-2xl font-bold ${styles.stepsText} `}>{item.value}</h3>
+      <p className={`text-xl tracking-wide font-bold ${styles.chopsicText}`}>{item.label}</p>
     </div>
   </div>
 ))}
