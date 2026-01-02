@@ -7,32 +7,68 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.background2{
+/* .background2{
   min-height: 100vh;
   background-image: url('/home/backdrop2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+} */
+
+.background2 {
+  min-height: 200vh;
+
+  /* BACK layer first, FRONT layer second */
+  background-image:
+  url('/home/backdrop2.png'),
+    url('/home/backdrop3.jpg');
+    
+
+  background-size:
+    cover,
+    cover ;
+
+  background-position:
+    center 50%,
+    top ;
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+
+  background-attachment:
+    scroll,
+    scroll;
 }
-.background3 {
+
+/* .background3 {
   position: absolute;
   inset: 0;
-  height: 75vh;              /* visible chain height */
-  margin: auto 0;            /* vertically center */
+  height: 75vh;              
+  margin: auto 0;            
   background-image: url('/home/linear-chain.png');
   background-repeat: repeat-x;
-  background-size: auto 100%; /* IMPORTANT */
+  background-size: auto 100%; 
   background-position: center;
   z-index: 0;
   opacity: 1;
+} */
+
+.background3 {
+  position: absolute;
+  inset: 0;
+  background-image: url('/home/backdrop3.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
 
 
 
 .circleChain {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
 
   background-image: url("/home/circular-chain.png");
   background-repeat: no-repeat;

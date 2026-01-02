@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import StatsSection from './StatsSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,7 +54,7 @@ const Page = () => {
       </div>
       <div id="nav-trigger" className="h-px" />
 
-      <div className={`w-full ${styles.background2}`}>
+      <div className={`w-full ${styles.background2} bg-black`}>
 
         {/* about  */}
         <section className="w-full px-6 md:px-16 py-16">
@@ -106,105 +107,9 @@ const Page = () => {
 
           </div>
         </section>
+      <StatsSection/>
       </div>
 
-      {/* stats section  */}
-      <div className="w-full flex flex-col items-center py-12 bg-black">
-
-        {/* aroow  */}
-        <div className="w-full flex justify-center mb-2">
-          <div
-            className="w-full h-[90px]"
-            style={{
-              backgroundImage: "url('/home/arrow.png')",
-              backgroundSize: "contain",
-            }}
-          />
-        </div>
-
-
-        <div className="relative w-full flex justify-center items-center h-[260px]">
-
-          <div className={styles.background3} />
-
-
-          <div className="relative flex gap-24 z-10">
-
-            <div
-              style={{
-                boxShadow: "0 0 35px rgba(212, 175, 55, 0.6)",
-              }}
-              className={`${styles.circleChain} relative flex items-center justify-center text-white`}>
-
-
-              <div
-                className="absolute flex flex-col items-center justify-center 
-                  w-[230px] h-[230px] 
-                  bg-[#d4af37] rounded-full text-black text-center">
-
-                <h3 className="text-2xl font-bold">1000+</h3>
-                <p className="text-xs tracking-wide">ATTENDEES</p>
-
-              </div>
-
-            </div>
-
-
-            <div
-              style={{
-                boxShadow: "0 0 35px rgba(212, 175, 55, 0.6)",
-              }}
-              className={`${styles.circleChain} relative flex items-center justify-center text-white`}>
-
-
-              <div className="absolute flex flex-col items-center justify-center 
-                  w-[230px] h-[230px] 
-                  bg-[#d4af37] rounded-full text-black text-center">
-
-                <h3 className="text-2xl font-bold">100+</h3>
-                <p className="text-xs tracking-wide">STARTUPS</p>
-
-              </div>
-
-            </div>
-
-
-            <div
-              style={{
-                boxShadow: "0 0 35px rgba(212, 175, 55, 0.6)",
-              }}
-              className={`${styles.circleChain} relative flex items-center justify-center text-white`}>
-
-
-              <div
-                className="absolute flex flex-col items-center justify-center 
-                  w-[230px] h-[230px] 
-                  bg-[#d4af37] rounded-full text-black text-center">
-
-                <h3 className="text-2xl font-bold">25+</h3>
-                <p className="text-xs tracking-wide">COMPETITION EVENTS</p>
-
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-
-
-        {/* arrow  */}
-        <div className="w-full flex justify-center mt-2">
-          <div
-            className="w-full h-[90px]  rotate-180"
-            style={{
-              backgroundImage: "url('/home/arrow.png')",
-              backgroundSize: "contain",
-            }}
-          />
-        </div>
-
-      </div>
 
 
 
