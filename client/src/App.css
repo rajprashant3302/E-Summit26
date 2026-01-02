@@ -1,0 +1,15 @@
+
+@font-face {
+  font-family: "Chopsic";
+  src: url("/fonts/Chopsic.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Steps";
+  src: url("/fonts/STEPSTracked Blur.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
