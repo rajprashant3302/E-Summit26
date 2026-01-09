@@ -2,6 +2,16 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from '../pages/home/Home.module.css'
 
+
+const scrollToSection = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  }
+};
+
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -23,10 +33,10 @@ const Navbar = () => {
 
         {/* desktop  */}
         <nav className={`hidden md:flex items-center gap-9 uppercase text-sm tracking-wider `}>
-          <Link to="/">Home</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/speakers">Speakers</Link>
-          <Link to="/team">Team</Link>
+          <button onClick={() => scrollToSection("home")}>HOME</button>
+          <button onClick={() => scrollToSection("events")}>EVENTS</button>
+          <button onClick={() => scrollToSection("speakers")}>SPEAKERS</button>
+          <button onClick={() => scrollToSection("sponsors")}>SPONSORS</button>
 
           <button className={`border-2 border-white px-5 py-2 rounded-lg text-sm tracking-widest ${styles.stepsText}`}>
             LOGIN
@@ -59,12 +69,13 @@ const Navbar = () => {
           ${open ? "max-h-[400px] py-6" : "max-h-0 py-0"}`}
       >
         <div className="flex flex-col items-center gap-6 uppercase tracking-wider text-sm">
-          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-          <Link to="/events" onClick={() => setOpen(false)}>Events</Link>
-          <Link to="/speakers" onClick={() => setOpen(false)}>Speakers</Link>
-          <Link to="/team" onClick={() => setOpen(false)}>Team</Link>
 
-          <button className="border-2 border-white px-6 py-1 rounded-full text-xs tracking-widest">
+           <button onClick={() => {scrollToSection("home"); setOpen(false)}}>HOME</button>
+          <button onClick={() =>  {scrollToSection("events"); setOpen(false)}}>EVENTS</button>
+          <button onClick={() =>  {scrollToSection("speakers"); setOpen(false)}}>SPEAKERS</button>
+          <button onClick={() =>  {scrollToSection("sponsors"); setOpen(false)}}>SPONSORS</button>
+
+          <button className={`border-2 border-white px-6 py-1 rounded-full text-xs tracking-widest ${styles.stepsText}`}>
             LOGIN
           </button>
         </div>

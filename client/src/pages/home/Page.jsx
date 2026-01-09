@@ -51,18 +51,16 @@ const Page = () => {
     <>
       <div className="overflow-x-hidden w-full ">
         {/* banner  */}
-        <div className={`flex flex-col justify-center items-center ${styles.background}`}>
-          <div ref={fadeRef}>
-            <section className="flex h-[50vh] justify-center items-center w-full">
-              <img className="translate-y-10 mt-20" ref={fadeRef} src="/home/banner-logo.png" alt="banner-logo" width={1000} height={500} />
-            </section>
-            {/* <p style={{fontSize: '40px', fontWeight: 400, color: "#FFFFFF", fontFamily: "'STEPS', sans-serif", letterSpacing: "7%", lineHeight: "100%", textShadow: "0 0 6px #000000", marginBottom: "120px"}}>
-            WHERE CREATIVITY MEETS CAPITAL
-          </p> */}
-            <img src="/home/tagline.png" alt="WHERE CREATIVITY MEETS CAPITAL" className="mt-20" />
-          </div>
-          {/* <ArrowDown className="text-white animate-bounce"/> */}
-        </div>
+
+        <section id="home" className="relative w-full">
+          <img
+            src="/home/banner.jpeg"
+            alt=""
+            className="w-full h-auto"
+          />
+        </section>
+
+
         <div id="nav-trigger" className="h-px" />
 
         <div className={`w-full ${styles.background2} bg-black relative`}>
@@ -89,20 +87,20 @@ const Page = () => {
 
           </div>
         </section> */}
+          <section className="absolute top-0 left-0 w-full flex justify-center z-20" style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(53, 42, 23, 0.45)", borderRadius: "0px" }}>
+            <Countdown />
+          </section>
 
 
-          <section className="w-full max-w-[1300px] flex px-4 md:px-16 pt-[180px] pb-16 flex-col mx-auto">
+          <section id="about" className="w-full max-w-[1300px] flex px-4 md:px-16 pt-[100px] sm:pt-[140px] md:pt-[180px] pb-16 flex-col mx-auto">
 
-            <section className="absolute top-0 left-0 w-full flex justify-center z-20" style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(53, 42, 23, 0.45)", borderRadius: "0px" }}>
-              <Countdown />
-            </section>
 
             {/* TOP ROW */}
             <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-4">
 
               {/* RIGHT BADGE */}
-              <div className="flex md:justify-start h-full w-fit py-4 px-10  bg-[#352A17] rounded-t-2xl border-r-3 border-t-3 border-l-3 border-white">
-                <div className={`bg-[#b0944b] text-white px-10 py-2 rounded-full text-2xl md:text-2xl font-bold tracking-widest uppercase ${styles.chopsicText}`}>
+              <div className="flex md:justify-start h-full w-fit py-2 md:py-4 px-4 md:px-10  bg-[#352A17] rounded-t-2xl border-r-3 border-t-3 border-l-3 border-white">
+                <div className={`bg-[#b0944b] text-white px-5 md:px-10 py-2 rounded-full text-sm md:text-2xl font-bold tracking-widest uppercase ${styles.chopsicText}`}>
                   <h2 >About Us</h2>
                 </div>
 
@@ -110,7 +108,16 @@ const Page = () => {
 
             </div>
             <div className='relative  w-full p-5 bg-[#352A17] rounded-b-2xl rounded-r-2xl border-b-3 border-t-3 border-l-3 border-r-3 border-white'>
-              <div className="absolute -top-[3px] left-0 h-1.5 w-[324px] bg-[#352A17] z-20"></div>
+              <div
+                className="
+    absolute -top-[3px] left-0 h-1.5 bg-[#352A17] z-20
+    w-[166px]
+    sm:w-[167px]
+    md:w-[324px]
+    lg:w-[324px]
+  "
+              ></div>
+
 
               {/* DESCRIPTION */}
               <p className=" text-sm md:text-xl leading-relaxed tracking-wide text-white ">
@@ -123,62 +130,76 @@ const Page = () => {
 
           </section>
 
-          {/* MOBILE VIEW */}
-          <section className="md:hidden w-full px-4 py-10 mt-4 bg-[#352A17] border border-white rounded-2xl flex flex-col items-center gap-4">
 
 
-            {/* CREATIVITY MEETS CAPITAL */}
-            <div
-              className={`bg-[#b0944b] text-white w-fit px-4 py-3 rounded-xl flex flex-col items-start ${styles.chopsicText}`}
-            >
-              <span className="text-sm font-bold tracking-widest uppercase">
-                About Us
-              </span>
-            </div>
-
-            {/* DESCRIPTION */}
-            <p className="text-sm leading-relaxed tracking-wide text-white">
-              E-Summit 2025, the flagship entrepreneurial event of IIT Patna,
-              is a vibrant platform that brings together innovators, investors,
-              startups, and industry leaders to foster entrepreneurship and
-              business growth.
-            </p>
-
-          </section>
-
-
-
-          <section className="w-full flex justify-center overflow-hidden md:overflow-visible py-10">
+          <section className="w-full flex justify-center py-10 overflow-hidden">
             <div
               className="
-      flex
-      gap-0
-      w-max
-      translate-x-[-120px] md:translate-x-0
+      grid
+      grid-cols-2
+      sm:grid-cols-3
+      lg:grid-cols-4
+      gap-4 sm:gap-10
     "
             >
-              <img
-                src="/home/card.png"
-                className="w-40 md:w-[200px] h-[360px] md:h-[448px] translate-y-10"
-                alt=""
-              />
-              <img
-                src="/home/card.png"
-                className="w-40 md:w-[200px] h-[360px] md:h-[448px] z-20"
-                alt=""
-              />
-              <img
-                src="/home/card.png"
-                className="w-40 md:w-[200px] h-[360px] md:h-[448px] translate-y-10"
-                alt=""
-              />
-              <img
-                src="/home/card.png"
-                className="w-40 md:w-[200px] h-[360px] md:h-[448px]"
-                alt=""
-              />
+              {/* CARD 1 */}
+              <div className="relative flex justify-center">
+                <img
+                  src="/home/card.png"
+                  className="w-40 md:w-[200px] h-[360px] md:h-[448px]"
+                  alt=""
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/10 mx-5 my-6 md:mx-7 md:my-9">
+                  <p className=" text-[#922724] text-xl md:text-2xl font-bold tracking-widest text-center font-['Noto_Serif_Devanagari'] leading-snug">
+                    उद्यमेन विचारः नवोन्मेषः च विकासः सिद्ध्यति
+                  </p>
+                </div>
+              </div>
+
+              {/* CARD 2 */}
+              <div className="relative flex justify-center">
+                <img
+                  src="/home/card.png"
+                  className="w-40 md:w-[200px] h-[360px] md:h-[448px]"
+                  alt=""
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/10 mx-5 my-6 md:mx-7 md:my-9">
+                  <p className="text-[#007f66] text-xl md:text-2xl font-bold tracking-widest text-center font-['Noto_Serif_Devanagari'] leading-snug">
+                    ज्ञानं साहसं नेतृत्वं च भविष्यं निर्माति
+                  </p>
+                </div>
+              </div>
+
+              {/* CARD 3 */}
+              <div className="hidden relative sm:flex justify-center">
+                <img
+                  src="/home/card.png"
+                  className="w-40 md:w-[200px] h-[360px] md:h-[448px]"
+                  alt=""
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/10 mx-5 my-6 md:mx-7 md:my-9">
+                  <p className="text-[#d70040] text-xl md:text-2xl font-bold tracking-widest text-center font-['Noto_Serif_Devanagari'] leading-snug">
+                    दृष्टिः कर्म च मिलित्वा महान् परिवर्तनं जनयतः
+                  </p>
+                </div>
+              </div>
+
+              {/* CARD 4 */}
+              <div className="hidden lg:flex relative justify-center">
+                <img
+                  src="/home/card.png"
+                  className="w-40 md:w-[200px] h-[360px] md:h-[448px]"
+                  alt=""
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/10 mx-5 my-6 md:mx-7 md:my-9">
+                  <p className="text-[#b06500]  text-xl md:text-2xl font-bold tracking-widest text-center font-['Noto_Serif_Devanagari'] leading-snug">
+                    स्वप्नाः परिश्रमः विश्वासः च सफलता नयन्ति
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
+
 
 
           {/* 
@@ -286,15 +307,21 @@ const Page = () => {
           </section>
 
           <StatsSection />
-          <EventsSection />
+          <section id="events">
+
+            <EventsSection />
+          </section>
+          <section id="speakers">
+
           <PastSpeakersSection />
+          </section>
         </div>
 
 
 
 
 
-        <div className={`${styles.background4} relative`}>
+        <div id="sponsors" className={`${styles.background4} relative`}>
           <img src="/home/investors.png" alt="investors" />
           <img src="/home/investors-list.png" alt="investors" style={{ marginTop: '60px', marginBottom: '60px' }} />
           <img src="/home/sponsors.png" alt="sponsors" />
