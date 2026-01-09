@@ -36,7 +36,7 @@
 /* ===== HEADER BOX ===== */
 .headerBox {
   position: relative;
-  width: 400px;
+  width: 320px;
   height: 160px;
   background-image: url("/images/header.png");
   background-size: cover;
@@ -56,7 +56,7 @@
   justify-content: center;
   font-family: "Chopsic", sans-serif;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 25px;
   letter-spacing: 0.14em;
   color: transparent;
   background: linear-gradient(
@@ -109,19 +109,41 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-  padding: 1rem 1.25rem;
-  width: 250px;
-  min-height: 400px;          /* optional */
-  border-radius: 8px;         /* optional */
+  position: relative;
+  width: 260px;
+  aspect-ratio: 3 / 4;
+
   background-image: url("/images/card.png");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 10px;
+  overflow: hidden;
+
   box-shadow:
     0 0 15px rgba(240, 164, 51, 0.6),
     0 0 30px rgba(240, 171, 51, 0.4);
+}
+
+/* Base invisible link */
+.socialLink {
+  position: absolute;
+  bottom: 24px;        /* adjust to match icon position */
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* LinkedIn hit area */
+.linkedin {
+  left: 50%;
+  transform: translateX(-120%);  /* move left icon */
+}
+
+/* Twitter hit area */
+.twitter {
+  left: 60%;
+  transform: translateX(20%);    /* move right icon */
 }

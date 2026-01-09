@@ -6,7 +6,7 @@ export default function PastSpeakersSection() {
       <div className={styles.sectionHeader}>
               <div>
                 <img
-                  src="/images/arrow-left.png"
+                  src="/images/arrowleft.png"
                   alt="Previous"
                   className={styles.arrowImageleft}
                 />
@@ -18,7 +18,7 @@ export default function PastSpeakersSection() {
       
               <div>
                 <img
-                  src="/images/arrow-right.png"
+                  src="/images/arrowright.png"
                   alt="Next"
                   className={styles.arrowImageright}  
                 />
@@ -35,15 +35,25 @@ export default function PastSpeakersSection() {
   );
 }
 
-function Card(){
-   return (
-   <div className={styles.card}>
-     <img
-           src="/images/card.png"
-           alt="Speaker"
-            className={styles.speakerImage}
-         />
-       </div>
+function Card() {
+  return (
+    <div className={styles.card}>
+      {/* Invisible clickable areas */}
+      <a
+        href="https://www.linkedin.com/in/mukeshbansal"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.socialLink} ${styles.linkedin}`}
+        aria-label="LinkedIn"
+      />
 
+      <a
+        href="https://twitter.com/mukeshbansal"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${styles.socialLink} ${styles.twitter}`}
+        aria-label="Twitter"
+      />
+    </div>
   );
 }

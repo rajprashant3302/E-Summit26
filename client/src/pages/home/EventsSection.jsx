@@ -8,7 +8,7 @@ export default function EventsSection() {
       <div className={styles.sectionHeader}>
         <div>
           <img
-            src="/images/arrow-left.png"
+            src="/images/arrowleft.png"
             alt="Previous"
             className={styles.arrowImageleft}
           />
@@ -20,7 +20,7 @@ export default function EventsSection() {
 
         <div>
           <img
-            src="/images/arrow-right.png"
+            src="/images/arrowright.png"
             alt="Next"
             className={styles.arrowImageright}  
           />
@@ -28,21 +28,32 @@ export default function EventsSection() {
       </div>
 
       <div className={styles.eventCards}>
-        <EventCard />
+        <div className={styles.eventCard}>
+      <img
+        src="/images/eventcard.png"
+        alt="Event"
+        className={styles.eventImage}
+      />
+    </div>
+
+     <div className={styles.eventCard}>
+      <img
+        src="/images/eventcard.png"
+        alt="Event"
+        className={styles.eventImage}
+      />
+    </div>
+
+    <div className={styles.eventCard}>
+      <img
+        src="/images/eventcard.png"
+        alt="Event"
+        className={styles.eventImage}
+      />
+    </div>
       </div>
    
     </section>
   );
 }
 
-function EventCard() {
-  return (
-    <div className={styles.eventCard}>
-      <img
-        src="/images/event-card.png"
-        alt="Event"
-        className={styles.eventImage}
-      />
-    </div>
-  );
-}
