@@ -36,7 +36,7 @@
 /* ===== HEADER BOX ===== */
 .headerBox {
   position: relative;
-  width: 400px;
+  width: 320px;
   height: 160px;
   background-image: url("/images/header.png");
   background-size: cover;
@@ -56,7 +56,7 @@
   justify-content: center;
   font-family: "Chopsic", sans-serif;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 25px;
   letter-spacing: 0.14em;
   color: transparent;
   background: linear-gradient(

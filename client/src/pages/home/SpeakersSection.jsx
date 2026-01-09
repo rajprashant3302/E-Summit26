@@ -6,7 +6,7 @@ export default function SpeakersSection() {
       <div className={styles.sectionHeader}>
         <div>
           <img
-            src="/images/arrow-left.png"
+            src="/images/arrowleft.png"
             alt="Previous"
             className={styles.arrowImageleft}
           />
@@ -18,7 +18,7 @@ export default function SpeakersSection() {
 
         <div>
           <img
-            src="/images/arrow-right.png"
+            src="/images/arrowright.png"
             alt="Next"
             className={styles.arrowImageright}  
           />
@@ -38,7 +38,7 @@ function SpeakerCard() {
   return (
     <div className={styles.speakerCard}>
       <img
-        src="/images/speaker-frame.png"
+        src="/images/speakerframe.png"
         alt="Speaker"
         className={styles.speakerImage}
       />

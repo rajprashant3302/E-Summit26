@@ -31,7 +31,7 @@ export default function PastSpeakersSection() {
       <div className={styles.sectionHeader}>
               <div>
                 <img
-                  src="/images/arrow-left.png"
+                  src="/images/arrowleft.png"
                   alt="Previous"
                   className={styles.arrowImageleft}
                 />
@@ -43,7 +43,7 @@ export default function PastSpeakersSection() {
       
               <div>
                 <img
-                  src="/images/arrow-right.png"
+                  src="/images/arrowright.png"
                   alt="Next"
                   className={styles.arrowImageright}  
                 />
