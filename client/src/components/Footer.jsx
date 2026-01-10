@@ -94,7 +94,7 @@ const Footer = () => {
         <div className="h-px bg-white/70 w-full" />
       </div>
       <div className="text-center text-xs text-white/70 py-4">
-        Copyright © 2023 – All rights reserved
+        Copyright © 2026 – All rights reserved
       </div>
 
     </footer>
