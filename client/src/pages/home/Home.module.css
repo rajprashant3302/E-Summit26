@@ -7,23 +7,18 @@
   font-family: "Steps", sans-serif;
   font-weight: 700;
 }
+/* .background {
+  width: 100%;
 
-.background{
-  min-height: 100vh;
-  background-image: url('/home/backdrop.png');
-  background-size: cover;
-  background-position: center;
+  background-image: url('/home/banner.jpeg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-/* .background2{
-  min-height: 100vh;
-  background-image: url('/home/backdrop2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position: center top;
+  background-size: contain;
+  aspect-ratio: 1920 / 966.8;
+
+  overflow: hidden;
 } */
+
 
 .background2 {
   min-height: 200vh;

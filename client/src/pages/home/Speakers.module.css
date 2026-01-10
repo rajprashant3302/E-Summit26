@@ -9,6 +9,7 @@
   text-align: center;
 }
 
+/* Dark overlay */
 .speakersSection::before {
   content: "";
   position: absolute;
@@ -71,23 +72,62 @@
 /* ===== CARDS ROW ===== */
 .cardsRow {
   display: flex;
-  justify-content: center;
+
+  /* 🔑 do NOT center when scrolling */
+  justify-content: flex-start;
+
   gap: 48px;
+
   overflow-x: auto;
-   scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE / Edge */
+  overflow-y: hidden;
+
+  /* 🔑 THIS prevents first/last card from cutting */
+  padding-inline: 24px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .cardsRow::-webkit-scrollbar {
-  display: none;                /* Chrome / Safari */
+  display: none;
 }
 
-/* ===== CARD IMAGE ===== */
-.cardImage {
+
+
+/* wrapper for each card */
+.cardWrap {
+  position: relative;
   width: 260px;
+  flex-shrink: 0;
+}
+
+/* your existing image */
+.cardImage {
+  width: 100%;
   height: auto;
   display: block;
 }
+
+/* overlay that sits ON the icons in the PNG */
+.socials {
+  position: absolute;
+  bottom: 58px;        /* vertical position of icons */
+  left: 50%;
+
+  transform: translateX(-50%);
+  display: flex;
+  gap: 17px;           /* distance between LinkedIn & Twitter */
+
+  z-index: 2;
+}
+
+/* clickable icon area */
+.socials a {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
 
 /* ===== TABLET ===== */
 @media (max-width: 1024px) {
@@ -98,7 +138,7 @@
 
   .arrow {
     width: 160px;
-  }
+}
 
   .cardsRow {
     gap: 32px;
@@ -144,7 +184,7 @@
 
   .cardImage {
     width: 220px;
-    flex: 0 0 auto;
+  flex: 0 0 auto;
     scroll-snap-align: center;
   }
 

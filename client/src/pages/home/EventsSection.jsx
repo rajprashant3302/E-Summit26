@@ -30,7 +30,7 @@ export default function EventsSection() {
       <div className={styles.eventCards}>
         <div className={styles.eventCard}>
       <img
-        src="/images/eventcard.png"
+        src="/images/event1.png"
         alt="Event"
         className={styles.eventImage}
       />
@@ -38,7 +38,7 @@ export default function EventsSection() {
 
      <div className={styles.eventCard}>
       <img
-        src="/images/eventcard.png"
+        src="/images/event2.png"
         alt="Event"
         className={styles.eventImage}
       />
@@ -46,7 +46,7 @@ export default function EventsSection() {
 
     <div className={styles.eventCard}>
       <img
-        src="/images/eventcard.png"
+        src="/images/event3.png"
         alt="Event"
         className={styles.eventImage}
       />

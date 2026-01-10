@@ -17,13 +17,34 @@ const Footer = () => {
       <div className="max-w-[1400px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
 
         <div>
-          <h3 className="text-lg font-semibold mb-3">About Us</h3>
-          <p className="text-sm text-white/80 leading-relaxed">
-            <span className="block">CONTACT US</span>
-            <span className="block">Phone: 7740929509, 7355797206</span>
-            <span className="block">Email: entrepreneurship@iitp.ac.in</span>
-          </p>
-        </div>
+  <h3 className="text-lg font-semibold mb-3">About Us</h3>
+
+  <p className="text-sm text-white/80 leading-relaxed space-y-1">
+    <span className="block font-semibold">CONTACT US</span>
+
+    <a
+      href="tel:7740929509"
+      className="block hover:text-white transition"
+    >
+      Phone: 7740929509
+    </a>
+
+    <a
+      href="tel:7355797206"
+      className="block hover:text-white transition"
+    >
+      Phone: 7355797206
+    </a>
+
+    <a
+      href="mailto:entrepreneurship@iitp.ac.in"
+      className="block hover:text-white transition"
+    >
+      Email: entrepreneurship@iitp.ac.in
+    </a>
+  </p>
+</div>
+
 
         <div>
           <h3 className="text-lg font-semibold mb-3">Important Links</h3>
@@ -54,11 +75,26 @@ const Footer = () => {
         </div>
 
       </div>
+      {/* MAP LOCATION */}
+<div className="max-w-[1400px] mx-auto px-6 py-8">
+  <div className="w-full h-[220px] md:h-[300px] rounded-xl overflow-hidden border border-white/20">
+    <iframe
+      title="E-Cell IIT Patna Location"
+      src="https://www.google.com/maps?q=Indian%20Institute%20of%20Technology%20Patna&output=embed"
+      className="w-full h-full"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </div>
+</div>
+
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="h-px bg-white/70 w-full" />
       </div>
       <div className="text-center text-xs text-white/70 py-4">
-        Copyright © 2023 – All rights reserved
+        Copyright © 2026 – All rights reserved
       </div>
 
     </footer>

@@ -85,7 +85,7 @@
 
 /* Card image */
 .eventImage {
-  width: 100%;
+  width: 320px;
   height: 100%;
   object-fit: cover;
 }
@@ -120,7 +120,7 @@
 
   /* Cards row becomes horizontal scroll */
   .eventCards {
-    width: 100%;
+    width: 200px;
     overflow-x: auto;
     justify-content: flex-start;
     gap: 20px;
@@ -134,7 +134,7 @@
   }
 
   .eventImage {
-    width: 220px;
-    height: 320px;
+    width: 180px;
+    height: 200px;
   }
 }

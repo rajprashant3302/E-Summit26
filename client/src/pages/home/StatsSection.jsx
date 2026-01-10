@@ -6,7 +6,7 @@ const StatsSection = () => {
     <div className="w-full flex flex-col items-center py-12 overflow-hidden">
 
       {/* top arrow  */}
-      <div className="w-full overflow-hidden mb-2">
+      {/* <div className="w-full overflow-hidden mb-2">
         <motion.div
           className="
             h-[90px]
@@ -25,11 +25,11 @@ const StatsSection = () => {
             repeat: Infinity,
           }}
         />
-      </div>
+      </div> */}
 
       {/* stats  */}
       <div className="relative w-full flex justify-center items-center bg-[#352A17] py-6">
-        <div className="relative z-10 flex flex-col md:flex-row gap-12 md:gap-24 items-center">
+        <div className="relative z-10 flex flex-col md:flex-row gap-0 sm:gap-6 md:gap-24 items-center">
 
           {[
   { value: "1000 +", label: "ATTENDEES" },
@@ -47,7 +47,7 @@ const StatsSection = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      whileHover={{ rotate: 90 }}
+      // whileHover={{ rotate: 90 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
     />
     <div className={`relative w-[200px] h-[200px] bg-[#d4af37] rounded-full flex flex-col items-center justify-center text-white text-center z-10 pointer-events-none  `}>
@@ -61,7 +61,7 @@ const StatsSection = () => {
       </div>
 
      {/* bottom arrow  */}
-      <div className="w-full overflow-hidden mt-2">
+      {/* <div className="w-full overflow-hidden mt-2">
         <motion.div
           className="
             h-[90px]
@@ -81,7 +81,7 @@ const StatsSection = () => {
             repeat: Infinity,
           }}
         />
-      </div>
+      </div> */}
 
     </div>
   );

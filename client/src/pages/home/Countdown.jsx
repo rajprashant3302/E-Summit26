@@ -27,7 +27,7 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="flex items-center justify-center gap-20 h-full pt-3 pb-3">
+    <div className="flex items-center justify-center gap-8 md:gap-20 h-full pt-3 pb-3">
       <Box label="DAYS" value={time.d} />
       <Box label="HOURS" value={time.h} />
       <Box label="MINUTES" value={time.m} />
@@ -38,25 +38,43 @@ export default function Countdown() {
 
 function Box({ value, label }) {
   return (
-    <div className="relative w-[120px] h-[120px]">
-      <img src={frame} className="absolute inset-0 w-full h-full scale-x-[1.5] origin-center"/>
-      <div className="absolute inset-0 flex items-center justify-center gap-2">
+    <div className="relative w-[55px] h-[55px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px]">
+      <img
+        src={frame}
+        className="absolute inset-0 w-full h-full scale-x-[1.4] sm:scale-x-[1.3] md:scale-x-[1.5] origin-center"
+        alt=""
+      />
+
+      <div className="absolute inset-0 flex items-center justify-center gap-1 sm:gap-1.5 md:gap-2">
         <span
-          style={{
-            fontFamily: "'inter', sans-serif",
-            fontWeight: "900",
-            fontSize: "48px",
-            color: "#FFFFFF",
-            letterSpacing: '7%',
-            lineHeight: '100%'
-          }}
+          className="
+            text-white
+            font-black
+            leading-none
+            tracking-widest
+            text-[18px]
+            sm:text-[24px]
+            md:text-[48px]
+          "
+          style={{ fontFamily: "'Inter', sans-serif" }}
         >
           {String(value).padStart(2, "0")}
         </span>
-        <span className="text-xs tracking-widest text-white mt-1">
+
+        <span
+          className="
+            text-[8px]
+            sm:text-[10px]
+            md:text-xs
+            tracking-widest
+            text-white
+            mt-1
+          "
+        >
           {label}
         </span>
       </div>
     </div>
   );
 }
+
